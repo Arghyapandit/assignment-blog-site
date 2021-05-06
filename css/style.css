@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 
+/* Basic Css For All Pages Starts here  */
+
 * {
   box-sizing: border-box;
 }
@@ -17,6 +19,10 @@ body {
   width: 1022px;
   margin: 0 auto;
 }
+
+/* Basic Css For All Pages Ends here  */
+
+/* Nav bar section start */
 
 .top-nav-bar {
   width: 100%;
@@ -46,7 +52,6 @@ body {
 
 .nav-page {
   padding: 0 10px;
-  font-size: 17px;
   margin-left: 20px;
 }
 
@@ -56,24 +61,33 @@ body {
   color: #2e333e;
 }
 
-.active {
-  padding-bottom: 10px;
-  border-bottom: 5px solid #0066f9;
+.nav-page::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 8px;
+  left: -8px;
+  width: 0;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #0066f9;
+  transition: 0.3s;
 }
 
-.nav-page:hover {
-  padding-bottom: 10px;
-  border-bottom: 5px solid #0066f9;
-  transition: 0.2s;
+.active::after {
+  width: 130%;
+}
+
+.nav-page:hover::after {
+  width: 130%;
+}
+
+.btn:hover::after {
+  width: 0;
 }
 
 .btn {
   margin-left: 30px;
-}
-
-.btn:hover {
-  padding-bottom: 0;
-  border-bottom: none;
 }
 
 .btn a {
@@ -84,7 +98,9 @@ body {
   color: #fff;
 }
 
-/* main */
+/* Nav bar section End */
+
+/* main section css Start here  */
 
 main {
   padding: 50px 0px;
@@ -99,9 +115,7 @@ main {
 
 .main-p {
   margin-top: 35px;
-  font-size: 17px;
   text-align: justify;
-  line-height: 27.7px;
   font-weight: 400;
 }
 
@@ -115,7 +129,6 @@ main {
 
 .blog-cards {
   width: 100%;
-  /* overflow: hidden; */
   margin-top: 25px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -154,11 +167,13 @@ main {
   color: #fff;
   font-size: 14px;
   font-weight: 600;
+  line-height: 14px;
   text-transform: uppercase;
-  margin-top: -17px;
+  margin-top: -24px;
 }
 
 /* Blog Page 3 Image bg color  */
+
 .bg-persian-green {
   background-color: #079992;
 }
@@ -194,7 +209,6 @@ main {
 
 .card-text {
   margin-top: 25px;
-  line-height: 27.7px;
 }
 
 .all-post {
@@ -202,10 +216,10 @@ main {
 }
 
 .all-post a {
-  font-size: 17px;
   color: #000000;
   text-decoration: underline;
 }
+
 /* Extra Css For Blog Page start */
 
 .blog-pages {
@@ -235,7 +249,170 @@ main {
   text-decoration: none;
 }
 
+.blog-page-inside p:nth-of-type(1) {
+  margin-top: 75px;
+  text-align: start;
+  font-weight: 400px;
+}
+
+.blog-page-inside img {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.blog-page-inside h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 30px 0;
+}
+
+.blog-page-inside p {
+  margin: 15px 0;
+}
+
+.blog-page-inside hr {
+  margin-bottom: 30px;
+}
+
+.blog-page-inside a {
+  text-decoration: none;
+}
+
 /* Extra Css For Blog Page end */
+
+/* Extra Css For Contact Page Start */
+
+.contact-us-form {
+  margin-top: 50px;
+}
+
+.form-group {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.form-group label {
+  font-size: 18px;
+}
+
+.form-group input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  border: 1px solid #353b48;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form-group textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  border: 1px solid #353b48;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+}
+
+.form-group-btn input {
+  margin-top: 25px;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  background-color: #0066f9;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Extra Css For Contact Page end */
+
+/* Extra Css For Contact Page start */
+
+.about-sec-h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 60px;
+}
+
+.about-sec a {
+  text-decoration: none;
+  color: #001ff9;
+}
+
+.about-sec p {
+  margin: 25px 0;
+}
+
+.about-sec h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.about-sec-link {
+  display: block;
+  margin: 15px 0;
+}
+
+.about-sec-table {
+  width: auto;
+}
+
+.about-sec-table th,
+.about-sec-table td {
+  border: 1px solid #2e333e;
+  padding: 5px 15px;
+  text-align: center;
+}
+
+.about-sec-table th {
+  font-weight: 600;
+}
+
+.about-sec-table tr:nth-of-type(even) {
+  background-color: #f8f8f8;
+}
+
+.about-sec-part {
+  padding: 0 15px;
+  color: #777777;
+  border-left: 4px solid #777777;
+  border-radius: 1px;
+}
+
+.about-hr-last {
+  border: 2px solid #eaeaea;
+}
+
+.contact-sec-map-detail {
+  font-size: 24px;
+  margin-top: 50px;
+  font-weight: 600px;
+}
+
+.contact-sec-map-detail a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #001ff9;
+}
+
+.map {
+  width: 100%;
+  height: 450px;
+  margin-top: 50px;
+}
+/* Extra Css For Contact Page end */
+
+/* main section css for Home Page End here  */
 
 /* footer sec style start */
 
@@ -260,7 +437,6 @@ footer i {
 }
 
 footer p {
-  font-size: 17px;
   padding: 5px 0;
   color: #2e333e;
 }
@@ -268,3 +444,5 @@ footer p {
 footer a {
   color: #2e333e;
 }
+
+/* footer sec style End */
