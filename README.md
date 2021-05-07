@@ -4,7 +4,7 @@ It's a very simple Static Blog Sight inspired By a Gatsby Templet or you can say
 
 ## [Please Visit My sight](https://arghyapandit.github.io/assignment-blog-site/)
 
-It's responsive websight but not mobilr friendly & you can't use The contact Form
+It's responsive websight but not mobile friendly & you can't use The contact Form
 
 If there is any kind of code mistake please contact with me via e-mail
 
