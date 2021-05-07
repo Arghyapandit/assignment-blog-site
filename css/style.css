@@ -16,7 +16,7 @@ body {
 }
 
 .wraper {
-  width: 1022px;
+  width: 1020px;
   margin: 0 auto;
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 .brand-logo {
-  width: 165px;
+  min-width: 170px;
   margin-right: auto;
 }
 
@@ -139,20 +139,25 @@ main {
   color: #000000;
   text-decoration: none;
   width: 100%;
-
   overflow: hidden;
 }
 
 .blog-card {
-  width: 100%;
-  min-height: 590px;
+  max-width: 100%;
+  height: auto;
   overflow: hidden;
   background-color: #eaeaea;
 }
 
 .blog-img {
   width: 100%;
+  height: auto;
   overflow: hidden;
+}
+
+.blog-img img {
+  width: 100%;
+  height: auto;
 }
 
 .card-tag-container {
@@ -446,3 +451,38 @@ footer a {
 }
 
 /* footer sec style End */
+
+/* responsive code  */
+
+@media (max-width: 1170px) {
+  body {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .main-heading {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .wraper {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .main-wraper {
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 690px) {
+  .brand-logo {
+    margin: 0 auto;
+  }
+  .nav-bar-pages {
+    display: none;
+  }
+  .blog-cards {
+    grid-template-columns: 1fr;
+  }
+}
